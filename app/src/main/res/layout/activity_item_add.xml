@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LocationAddActivity"
+    android:background="@color/backgroundColor">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <!--Back button-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/backBtn"
+            android:src="@drawable/ic_add_box_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Add a new Item"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+    </RelativeLayout>
+
+    <!--Input category-->
+    <LinearLayout
+        android:id="@+id/linearL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="230dp"
+        app:hintEnabled="false"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:hint="Item Title"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textColorHint="@color/gray01"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/etItemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:hint="Item Description"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textColorHint="@color/gray01"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/etItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:hint="Item Price"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textColorHint="@color/gray01"/>
+
+
+    </LinearLayout>
+
+    <!--add location button-->
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearL1"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button01"
+        android:text="submit"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
